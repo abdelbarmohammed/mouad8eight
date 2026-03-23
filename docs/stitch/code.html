@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>MOUAD8EIGHT | Official Artist Portfolio</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "on-primary": "#2f3131",
+                        "on-surface-variant": "#c2c6d6",
+                        "tertiary-fixed": "#ffdcc6",
+                        "error": "#ffb4ab",
+                        "inverse-on-surface": "#313030",
+                        "surface-container-low": "#1c1b1b",
+                        "primary-container": "#909191",
+                        "on-error": "#690005",
+                        "surface-bright": "#3a3939",
+                        "secondary-fixed": "#d8e2ff",
+                        "primary": "#c6c6c7",
+                        "on-primary-fixed-variant": "#454747",
+                        "surface": "#131313",
+                        "inverse-primary": "#5d5f5f",
+                        "secondary-container": "#0566d9",
+                        "outline-variant": "#424754",
+                        "surface-container-high": "#2a2a2a",
+                        "on-primary-fixed": "#1a1c1c",
+                        "primary-fixed-dim": "#c6c6c7",
+                        "primary-fixed": "#e2e2e2",
+                        "secondary-fixed-dim": "#adc6ff",
+                        "outline": "#8c909f",
+                        "secondary": "#3b82f6",
+                        "surface-container-lowest": "#0e0e0e",
+                        "on-tertiary-fixed": "#311400",
+                        "on-tertiary-container": "#461f00",
+                        "inverse-surface": "#e5e2e1",
+                        "surface-variant": "#353534",
+                        "error-container": "#93000a",
+                        "on-primary-container": "#282a2a",
+                        "on-secondary": "#002e6a",
+                        "on-background": "#e5e2e1",
+                        "on-error-container": "#ffdad6",
+                        "surface-tint": "#c6c6c7",
+                        "on-surface": "#e5e2e1",
+                        "tertiary-container": "#df7412",
+                        "on-secondary-fixed": "#001a42",
+                        "surface-container-highest": "#353534",
+                        "on-secondary-fixed-variant": "#004395",
+                        "surface-container": "#201f1f",
+                        "background": "#0a0a0a",
+                        "on-secondary-container": "#e6ecff",
+                        "on-tertiary": "#502400",
+                        "tertiary": "#ffb786",
+                        "tertiary-fixed-dim": "#ffb786",
+                        "surface-dim": "#131313",
+                        "on-tertiary-fixed-variant": "#723600"
+                    },
+                    fontFamily: {
+                        "headline": ["Space Grotesk"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0px", "lg": "0px", "xl": "0px", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #0a0a0a;
+            color: #e5e2e1;
+            scroll-behavior: smooth;
+        }
+        .sonic-monolith {
+            text-transform: uppercase;
+            letter-spacing: -0.02em;
+        }
+        .glass-nav {
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+</head>
+<body class="font-body selection:bg-secondary selection:text-on-secondary">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full flex justify-between items-center px-8 py-6 max-w-none bg-surface/80 dark:bg-[#131313]/80 backdrop-blur-xl z-50 transition-all duration-300">
+<div class="text-2xl font-black tracking-tighter text-white sonic-monolith">MOUAD8EIGHT</div>
+<div class="hidden md:flex gap-10">
+<a class="font-['Space_Grotesk'] uppercase tracking-widest text-sm text-[#3b82f6] border-b-2 border-[#3b82f6] pb-1 transition-all duration-300" href="#home">Home</a>
+<a class="font-['Space_Grotesk'] uppercase tracking-widest text-sm text-white/70 hover:text-white transition-all duration-300" href="#sets">Sets</a>
+<a class="font-['Space_Grotesk'] uppercase tracking-widest text-sm text-white/70 hover:text-white transition-all duration-300" href="#about">About</a>
+<a class="font-['Space_Grotesk'] uppercase tracking-widest text-sm text-white/70 hover:text-white transition-all duration-300" href="#gigs">Gigs</a>
+<a class="font-['Space_Grotesk'] uppercase tracking-widest text-sm text-white/70 hover:text-white transition-all duration-300" href="#gallery">Gallery</a>
+<a class="font-['Space_Grotesk'] uppercase tracking-widest text-sm text-white/70 hover:text-white transition-all duration-300" href="#booking">Booking</a>
+</div>
+<a class="bg-surface_fixed text-on_surface_fixed px-6 py-2 font-headline uppercase text-xs tracking-widest bg-white text-black hover:bg-secondary transition-colors duration-300" href="#booking">
+            Book Now
+        </a>
+</nav>
+<!-- Hero Section -->
+<section class="relative min-h-screen flex flex-col justify-center items-start px-8 md:px-24 overflow-hidden" id="home">
+<div class="absolute inset-0 z-0 overflow-hidden">
+<div class="absolute inset-0 bg-gradient-to-r from-[#0a0a0a] via-[#0a0a0a]/80 to-transparent z-10"></div>
+<img class="w-full h-full object-cover grayscale opacity-40" data-alt="Cinematic wide shot of a DJ performing at a massive techno festival with blue laser beams and smoke atmosphere" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC2ZoXyTrUTDwpgWhrgrdg8ZSV39q-AS2jOAtKNe4V3BeY4VyNb0qMhTcgk757w1D1fazd-R4oJFoGjDUH6eskr0XbVNoUtUUwVHXqsRKIa9FG7INJTmHFYYFr7YYqTlqbT1UeLqkZdvjspesGigvh-otv8Elnud8lQwxorsONB0v4LsDqK3Jarc6EfhXDKHPRr2VxPxVZv8lzNX6xC-gldmosLgclIX2ZmY4qda3S6l7BFKOchWwGzBhoG-2-Ydu0qtQsjV7saQRs"/>
+</div>
+<div class="relative z-20 max-w-4xl">
+<span class="block text-secondary font-headline tracking-[0.3em] uppercase text-sm mb-4">Precision Techno Artist</span>
+<h1 class="text-7xl md:text-[12rem] font-bold sonic-monolith leading-[0.85] mb-8 text-white">MOUAD<br/>8EIGHT</h1>
+<p class="text-on-surface-variant text-lg md:text-xl max-w-xl mb-12 font-light leading-relaxed">
+                Sculpting sonic landscapes through industrial rhythms and hypnotic frequencies. From the heart of Berlin to the global stage.
+            </p>
+<div class="flex flex-wrap gap-6">
+<a class="group flex items-center gap-3 bg-white text-black px-8 py-4 font-headline uppercase tracking-widest text-sm hover:bg-secondary transition-all active:scale-95" href="#sets">
+                    Watch Sets
+                    <span class="material-symbols-outlined text-sm">play_arrow</span>
+</a>
+<a class="flex items-center gap-3 border border-outline/30 text-white px-8 py-4 font-headline uppercase tracking-widest text-sm hover:bg-white/5 transition-all active:scale-95" href="#booking">
+                    Secure Booking
+                </a>
+</div>
+</div>
+<div class="absolute bottom-12 right-12 hidden md:block">
+<div class="flex flex-col items-end gap-2 text-on-surface-variant opacity-30 rotate-90 origin-bottom-right">
+<span class="font-headline tracking-widest uppercase text-xs">Scroll to explore</span>
+<div class="w-24 h-[1px] bg-on-surface-variant"></div>
+</div>
+</div>
+</section>
+<!-- Sets Section (Bento Grid Style) -->
+<section class="py-32 px-8 md:px-24 bg-background" id="sets">
+<div class="flex flex-col md:flex-row justify-between items-baseline mb-20 gap-8">
+<h2 class="text-5xl md:text-8xl font-bold sonic-monolith text-white">Latest<br/>Sets</h2>
+<div class="w-full md:w-1/3 h-[1px] bg-outline-variant/30 hidden md:block"></div>
+<div class="text-on-surface-variant max-w-xs font-label text-xs uppercase tracking-[0.2em] leading-loose">
+                Curated high-fidelity recordings from worldwide residencies and festival appearances.
+            </div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-10">
+<!-- Featured Set -->
+<div class="md:col-span-8 group cursor-pointer">
+<div class="relative aspect-video overflow-hidden bg-surface-container mb-6">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Wide angle view of a packed warehouse party with industrial lighting and a central DJ booth" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB91UyInsHHhqjvp-lylzYgLyhm3aIHtz9C1gHnScTjuLgTf5VEOvL551ss7DkvJVd0EJEE1ptS3OnPjysCZ0n6x3h2dk7vfBZJ_QHLYRceLNPH9RfDLB2PDQ1mUkm3BZtUrtIpeFsitj3W1ZDat05pGEUKK9Z_rS76iIaX0h2iTvF0QyvO0SkFkw8IIBwfjQWT2EFf4zW4FULmrBGZ-Rf9C8BKBGuzbl94paFau1SSYg1g5tcRSklflaVNeLCJSBRGRs49nlLTwP0"/>
+<div class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-6xl text-white">play_circle</span>
+</div>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<h3 class="text-2xl font-bold font-headline uppercase text-white mb-1">Live at Berghain | Main Hall</h3>
+<p class="text-on-surface-variant font-body text-sm uppercase tracking-widest">Techno • 2 Hours • Oct 2023</p>
+</div>
+<span class="text-secondary font-headline text-sm uppercase tracking-widest">Trending</span>
+</div>
+</div>
+<!-- Side Set 1 -->
+<div class="md:col-span-4 group cursor-pointer">
+<div class="relative aspect-video overflow-hidden bg-surface-container mb-6">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Atmospheric close up of vinyl spinning on a high-end turntable in a dark club setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA9ICtVnbhwipblvvGx6ZNrlN7-pPQynf041bznaAKWgoG0VafccxbUChCOg-NsuOJ1PFTWjGjwyOFSdxUtJ1UgEuTa_Qtd7l3H8eSwgEMUlARSC7QI8mXxiarhLTrk7Cjx7sI8cdFPFAOMIw69_b3ozHpm1SrpsfWXHQi6rYp5ywJZrQ_59NfoFaOrNlCcNqFTH4cGwfzdb4fPY3z6HHRs8U_xm0H6taAYBrvMfde95LSHDtGvAwGDyV7KXhPndjUxpEq8iOr5wm4"/>
+<div class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-4xl text-white">play_circle</span>
+</div>
+</div>
+<h3 class="text-xl font-bold font-headline uppercase text-white mb-1">Vinyl Only Archive #04</h3>
+<p class="text-on-surface-variant font-body text-xs uppercase tracking-widest">Dub Techno • 90 Mins</p>
+</div>
+<!-- Side Set 2 -->
+<div class="md:col-span-4 group cursor-pointer">
+<div class="relative aspect-video overflow-hidden bg-surface-container mb-6">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Neon blue and pink light reflections on a professional mixing console" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCMXeT9eBDNSgwAloYbIRFfVSdmUvE_MJF4I6U_NpZ40QG9uFQk8Q9agKNY_7rOnSJzVt7-3sxRlo9fmvvdmpZGxX5FbOlZt4dw_qjT9dCGqIB5dkbFzO3VUFaTy_RxfNBb2TaDysamYxiFE7hs633QmqIYLlFe82pWAhMd4Lx2jc_gwkU7J8XBohHHsEOyPW71iTZYsBJmLJDX-jRtu4kZxD18SkFPMAvZBNhOr9h4ZPQqCgI0_DbHPy8pn5QkAl2b-3fYA14oO7w"/>
+<div class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-4xl text-white">play_circle</span>
+</div>
+</div>
+<h3 class="text-xl font-bold font-headline uppercase text-white mb-1">Hate Podcast | Guest Mix</h3>
+<p class="text-on-surface-variant font-body text-xs uppercase tracking-widest">Industrial • 60 Mins</p>
+</div>
+<div class="md:col-span-8 flex items-center justify-center border border-outline-variant/30 hover:border-secondary transition-colors cursor-pointer group p-12">
+<span class="text-white font-headline uppercase tracking-[0.3em] text-sm group-hover:text-secondary transition-colors">View All Broadcasts (24)</span>
+</div>
+</div>
+</section>
+<!-- About Section -->
+<section class="py-32 px-8 md:px-24 bg-surface-container-lowest" id="about">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-24 items-center">
+<div class="relative">
+<div class="absolute -top-4 -left-4 w-24 h-24 border-t-2 border-l-2 border-secondary/50"></div>
+<img class="w-full aspect-[3/4] object-cover grayscale brightness-75" data-alt="Striking black and white vertical portrait of a male artist in a minimalist hoodie looking intensely at camera" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB7EAQ2w1mq3Tg3aIQVjsQLWE9olIg2jMFz_0VEGx08buU9Wpus7HX1OKogrWORo5IB3MaPia0rZq0mngZaAFD0FeXCKmAB5qyyiIaXhUWwwj7BKR7JxrJzqKCxKDDnwB6fU-LhqWB7GNPQgJJ2w6MMjSCQ13LMD1_b-1AmSCrw0ItVT8YfMcUAvreU5mLD8g-TM2nwM6iSRrSRZInlAvrDmqX4agCV66_xoBA3ZTrtHPJJS6kkKQ58Mzb8ehhJSQNtlgdaiLRyrqA"/>
+<div class="absolute -bottom-4 -right-4 w-24 h-24 border-b-2 border-r-2 border-secondary/50"></div>
+</div>
+<div class="flex flex-col">
+<h2 class="text-5xl md:text-8xl font-bold sonic-monolith text-white mb-12">The<br/>Architect</h2>
+<div class="space-y-8 text-on-surface-variant font-body leading-loose text-lg font-light">
+<p>
+                        With a decade spent navigating the shadows of the underground, MOUAD8EIGHT has established himself as a master of atmospheric tension. His sound is a dialogue between machine-like precision and primal energy.
+                    </p>
+<p>
+                        Born from the gritty warehouse scene of Casablanca and refined in the cold, industrial labs of Berlin, his sets are not mere performances but endurance tests of rhythm and sound.
+                    </p>
+</div>
+<div class="mt-16 flex flex-wrap gap-4">
+<span class="px-6 py-2 border border-outline-variant text-xs uppercase tracking-widest text-secondary font-headline">Industrial</span>
+<span class="px-6 py-2 border border-outline-variant text-xs uppercase tracking-widest text-secondary font-headline">Raw Techno</span>
+<span class="px-6 py-2 border border-outline-variant text-xs uppercase tracking-widest text-secondary font-headline">Dub Hypnotic</span>
+<span class="px-6 py-2 border border-outline-variant text-xs uppercase tracking-widest text-secondary font-headline">EBM Influenced</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Gigs Section -->
+<section class="py-32 px-8 md:px-24 bg-background" id="gigs">
+<h2 class="text-5xl md:text-8xl font-bold sonic-monolith text-white mb-24">Global<br/>Circuit</h2>
+<div class="space-y-0">
+<!-- Gig Row -->
+<div class="group flex flex-col md:flex-row justify-between items-start md:items-center py-12 border-b border-outline-variant/20 hover:bg-surface-container-low transition-colors px-4">
+<div class="flex items-center gap-12 mb-4 md:mb-0">
+<span class="font-headline text-3xl md:text-5xl text-white/20 group-hover:text-secondary transition-colors leading-none">08.11</span>
+<div>
+<h4 class="text-2xl font-bold font-headline uppercase text-white">Movement Festival</h4>
+<p class="text-on-surface-variant font-body text-xs uppercase tracking-widest">Main Stage • Detroit, USA</p>
+</div>
+</div>
+<a class="text-xs font-headline uppercase tracking-widest py-3 px-8 border border-outline/30 hover:bg-white hover:text-black transition-all" href="#">Tickets</a>
+</div>
+<div class="group flex flex-col md:flex-row justify-between items-start md:items-center py-12 border-b border-outline-variant/20 hover:bg-surface-container-low transition-colors px-4">
+<div class="flex items-center gap-12 mb-4 md:mb-0">
+<span class="font-headline text-3xl md:text-5xl text-white/20 group-hover:text-secondary transition-colors leading-none">15.11</span>
+<div>
+<h4 class="text-2xl font-bold font-headline uppercase text-white">Fabric London</h4>
+<p class="text-on-surface-variant font-body text-xs uppercase tracking-widest">Room 1 • London, UK</p>
+</div>
+</div>
+<span class="text-xs font-headline uppercase tracking-widest py-3 px-8 bg-surface-container-high text-white/40 cursor-not-allowed">Sold Out</span>
+</div>
+<div class="group flex flex-col md:flex-row justify-between items-start md:items-center py-12 border-b border-outline-variant/20 hover:bg-surface-container-low transition-colors px-4">
+<div class="flex items-center gap-12 mb-4 md:mb-0">
+<span class="font-headline text-3xl md:text-5xl text-white/20 group-hover:text-secondary transition-colors leading-none">22.11</span>
+<div>
+<h4 class="text-2xl font-bold font-headline uppercase text-white">Aura Festival</h4>
+<p class="text-on-surface-variant font-body text-xs uppercase tracking-widest">Beach Stage • Marrakesh, MAR</p>
+</div>
+</div>
+<a class="text-xs font-headline uppercase tracking-widest py-3 px-8 border border-outline/30 hover:bg-white hover:text-black transition-all" href="#">Tickets</a>
+</div>
+<div class="group flex flex-col md:flex-row justify-between items-start md:items-center py-12 border-b border-outline-variant/20 hover:bg-surface-container-low transition-colors px-4">
+<div class="flex items-center gap-12 mb-4 md:mb-0">
+<span class="font-headline text-3xl md:text-5xl text-white/20 group-hover:text-secondary transition-colors leading-none">05.12</span>
+<div>
+<h4 class="text-2xl font-bold font-headline uppercase text-white">Tressor Berlin</h4>
+<p class="text-on-surface-variant font-body text-xs uppercase tracking-widest">The Vault • Berlin, DE</p>
+</div>
+</div>
+<a class="text-xs font-headline uppercase tracking-widest py-3 px-8 border border-outline/30 hover:bg-white hover:text-black transition-all" href="#">Tickets</a>
+</div>
+</div>
+</section>
+<!-- Gallery Section (Masonry-like) -->
+<section class="py-32 px-8 md:px-24 bg-surface-container-lowest" id="gallery">
+<h2 class="text-5xl md:text-8xl font-bold sonic-monolith text-white mb-24 text-right">In the<br/>Dark</h2>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+<div class="space-y-8">
+<img class="w-full grayscale brightness-90 hover:brightness-100 transition-all" data-alt="High contrast shot of a crowd's hands reaching up in silhouette against bright stage strobes" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA1k36pIuYrhlt7lbxRf3H0-Eu0r9X-2YdgiSJS_X88CGn3rGMPDSAIvNDC7pcFZv7LOdrwae9wB7wGqzhLcNZrbPzcnvO2dbqWofZXmgRwnERaueD0hYi0me-2WEUR1POfyF4ZG5L28bJOiRM2HxN55CPDT70DgIn4ollC5BSlgu0y06KNwbFZf3XZTusbiwP-hMWVlNRKBVL90DBpCNWzT55OCzrx4nr3mkv_LBDWFSLCSjautpBgDcBoR3ynebmHJq_aSdGmkfc"/>
+<img class="w-full grayscale brightness-90 hover:brightness-100 transition-all" data-alt="Close up of modular synthesizer patch cables and glowing LED lights in a dark studio" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAeCMvqmvDK4EGaxuzf3AaTq2MctkFqExNEr70pAQNxt-w5zqSe-yMvSWtvexLHWL2rbB0U7Go2xj1CVhrCNltd8x12TVHB_fuvs4Y0oxI_r_FqqUcbZufymv8OgNlQGIBO71CE0Oib0_Qaip_kfPu8SqOen_OvQ-Kqr87uj-HXsGSPx7dYK6y0EPqxjqC3U_Lb2QJowbCrNF9gvdEce7VQHrUY8l_1hVzAoIdjpYmqKgEDRwKZVkvQk-XYZ3WvbpkvQNDCj3lHTms"/>
+</div>
+<div class="space-y-8 pt-16">
+<img class="w-full grayscale brightness-90 hover:brightness-100 transition-all" data-alt="Abstract bokeh of colored lights reflecting off a wet asphalt street at night" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD9NJ--Nm-iGv1crXlWG7m3SO32R5sf4fPnUSEO7b_kV0OnrLtaBqdHUw6kI3FGZtMmbLhqbq9nyj03-SYLeRCKrF9F6vzFxaim1IysP995NbWl4bgNmd0XTEIs5sHCFBct0VApj4jlhwyFr-Z246aXJMOo4bQu_RSTHeRwu15yseiQp_3EUnAJG3bhs9hT2hV1o0B4J-vLUqdMOeZQvz_4tb380Nk4x8jHL9EIeQ1mcFH9BCsWTv8ojSulw6zpOlf32-5vnCXjpWg"/>
+<img class="w-full grayscale brightness-90 hover:brightness-100 transition-all" data-alt="A lone DJ silhouette framed by a giant circular LED screen displaying white static noise" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAp2A2ZqRGpf6Li4PxLXTJYXdYp4NAHgdpNDO8HaHPJo12cjti-dHNzq7_uOEMqd4NXwx5ixrIhSFtZQOkSkF7mUEg3fXGfOveq7p-4_p_mKXupy0J3EuP4V_NXJ_47TkoddNgcOWZDqU_K9MglxrwQb3KR08APoANecPYj5fC7euH6FWLODSh_3cQt5vJWYbubu277GE3C5exI6jRsaiHCC2k-OuoBXz9pbjGF4BVrGIxDMTxynR793dxlxlRLXPgJqndSBUrwqnA"/>
+</div>
+<div class="space-y-8">
+<img class="w-full grayscale brightness-90 hover:brightness-100 transition-all" data-alt="Extreme wide shot of a massive warehouse rave with laser patterns scanning the ceiling" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBr4CLMSwBV2rqxDVEBVlE6quJV0Tb8ujy__Ot81S2rHoGguStN28cDQajlhyF-5CcAc3eltoV8S4Oh82wvpkUsJWJ6i1E_xYENFLs0zHAto6VE8JtOyNqHG5xV_9IgZwdclErD8RDE-CArcphphQMVs7NfIazb6KKI6fdY9ytcaww2je1iRc72Mt-Lu8oP4mGK_YSa5akwzz6lV2lXlvX_vaALYm-wITlRyboEKO4CUJZH5NXZJCrGix9K8FTUjBULEmsw4CM08EM"/>
+<img class="w-full grayscale brightness-90 hover:brightness-100 transition-all" data-alt="Macro shot of a turntable needle landing on a black vinyl record groove" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAWhXPJN5btf4pgKMa7KRZkLIRPcChsER_WppXIzV2qjGTS-oSF-DsZjDrTQjoL800V0MsvCV_Od5JgkxKO45EX38ch7dtrLpzEzjpL4FgqR5sB_71VhCY2iHV_TIkZ5b7ksKwMtyfhq5thdj-X4Hd6p-5pY65cdkTEsUxHjo3H33B3TBxKn3IrVKTzxKWJ2BcFI4iJY027txJzZoX8UNnxLJp9NZ8kZHKaG1tbPLPe_nOqrqJc7xT9ex3mXnc513mhiPEZIvUOeO0"/>
+</div>
+<div class="space-y-8 pt-24">
+<img class="w-full grayscale brightness-90 hover:brightness-100 transition-all" data-alt="Side profile of a DJ wearing headphones in intense concentration under a single blue spotlight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDKO8SMmPhviec2v59fEuNClP6QnIjJDK9Yg5LD4tLwdhRTu72KKOYcjcwUcT69ijgvymhtz4tuqWZ5DYociuiDA6fdDSodBsVGAYaq1qOIWo4TRBQ2FeCmg2JjhEjpuoSDuCjUiyMC-FCQW62Qpa8OgqNH_X8jiJ7x5as3rT_31j_npk5CPlVET2t5NQqfqWDni_MzY-wa-qpxDmOF4n0TQ1iquBBwHt5MZareubMGfTBrCKpyYspRE__t2v4rjND0hWjvOTlmI1w"/>
+</div>
+</div>
+</section>
+<!-- Booking Section -->
+<section class="py-32 px-8 md:px-24 bg-background" id="booking">
+<div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-24">
+<div>
+<h2 class="text-5xl md:text-8xl font-bold sonic-monolith text-white mb-8">Secure<br/>Date</h2>
+<p class="text-on-surface-variant font-body text-lg mb-12">
+                    For all performance inquiries, festival bookings, and press requests. Please allow 48 hours for our management team to respond.
+                </p>
+<div class="space-y-6">
+<div class="flex items-center gap-6">
+<span class="w-12 h-12 bg-surface-container flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined">mail</span>
+</span>
+<div>
+<p class="text-xs uppercase tracking-widest text-on-surface-variant font-headline">Management</p>
+<p class="text-white">booking@mouad8eight.com</p>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<span class="w-12 h-12 bg-surface-container flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined">public</span>
+</span>
+<div>
+<p class="text-xs uppercase tracking-widest text-on-surface-variant font-headline">Agency</p>
+<p class="text-white">Underground Artists Agency (UAA)</p>
+</div>
+</div>
+</div>
+</div>
+<form class="space-y-8">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="space-y-2">
+<label class="block text-[10px] uppercase tracking-[0.2em] text-on-surface-variant">Full Name</label>
+<input class="w-full bg-surface-container border-none p-4 text-white focus:ring-1 focus:ring-secondary transition-all outline-none" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="block text-[10px] uppercase tracking-[0.2em] text-on-surface-variant">Email Address</label>
+<input class="w-full bg-surface-container border-none p-4 text-white focus:ring-1 focus:ring-secondary transition-all outline-none" type="email"/>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="space-y-2">
+<label class="block text-[10px] uppercase tracking-[0.2em] text-on-surface-variant">Event Type</label>
+<select class="w-full bg-surface-container border-none p-4 text-white focus:ring-1 focus:ring-secondary transition-all outline-none">
+<option>Club Show</option>
+<option>Festival</option>
+<option>Private Event</option>
+<option>Other</option>
+</select>
+</div>
+<div class="space-y-2">
+<label class="block text-[10px] uppercase tracking-[0.2em] text-on-surface-variant">Date</label>
+<input class="w-full bg-surface-container border-none p-4 text-white focus:ring-1 focus:ring-secondary transition-all outline-none" type="date"/>
+</div>
+</div>
+<div class="space-y-2">
+<label class="block text-[10px] uppercase tracking-[0.2em] text-on-surface-variant">Message</label>
+<textarea class="w-full bg-surface-container border-none p-4 text-white focus:ring-1 focus:ring-secondary transition-all outline-none" rows="4"></textarea>
+</div>
+<button class="w-full bg-secondary text-on-secondary font-headline uppercase tracking-[0.3em] py-5 text-sm hover:brightness-110 active:scale-[0.98] transition-all" type="submit">
+                    Submit Inquiry
+                </button>
+</form>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-[#0e0e0e] flex flex-col md:flex-row justify-between items-center px-12 w-full py-12 mt-20">
+<div class="mb-8 md:mb-0">
+<div class="text-lg font-bold text-white sonic-monolith">MOUAD8EIGHT</div>
+<p class="font-['Inter'] text-[10px] tracking-[0.1em] uppercase text-on-surface-variant mt-2 opacity-50">© 2024 MOUAD8EIGHT. ALL RIGHTS RESERVED.</p>
+</div>
+<div class="flex gap-12">
+<a class="font-['Inter'] text-xs tracking-[0.1em] uppercase text-[#on_surface_variant] hover:text-[#3b82f6] transition-colors fade-in-up hover:translate-y-[-2px]" href="#">Instagram</a>
+<a class="font-['Inter'] text-xs tracking-[0.1em] uppercase text-[#on_surface_variant] hover:text-[#3b82f6] transition-colors fade-in-up hover:translate-y-[-2px]" href="#">Soundcloud</a>
+<a class="font-['Inter'] text-xs tracking-[0.1em] uppercase text-[#on_surface_variant] hover:text-[#3b82f6] transition-colors fade-in-up hover:translate-y-[-2px]" href="#">YouTube</a>
+<a class="font-['Inter'] text-xs tracking-[0.1em] uppercase text-[#on_surface_variant] hover:text-[#3b82f6] transition-colors fade-in-up hover:translate-y-[-2px]" href="#">Resident Advisor</a>
+</div>
+<div class="hidden md:block">
+<a class="w-12 h-12 flex items-center justify-center border border-outline-variant/30 text-white/50 hover:text-white hover:border-white transition-all" href="#home">
+<span class="material-symbols-outlined">arrow_upward</span>
+</a>
+</div>
+</footer>
+</body></html>

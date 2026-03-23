@@ -1,0 +1,22 @@
+---
+import GigItem from "./GigItem.astro";
+import { gigs } from "../data/gigs.js";
+---
+
+<section id="gigs" class="py-32 px-8 md:px-24 bg-background">
+
+  <h2 class="text-5xl md:text-8xl font-bold sonic-monolith text-white mb-24">
+    Global<br />Circuit
+  </h2>
+
+  {gigs.length > 0 ? (
+    <div>
+      {gigs.map((gig) => <GigItem gig={gig} />)}
+    </div>
+  ) : (
+    <p class="text-on-surface-variant font-body text-sm uppercase tracking-widest border-t border-outline-variant/20 pt-12">
+      No upcoming shows — check back soon.
+    </p>
+  )}
+
+</section>

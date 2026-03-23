@@ -1,0 +1,73 @@
+---
+const navLinks = [
+  { label: "Home",    href: "#home" },
+  { label: "Sets",    href: "#sets" },
+  { label: "About",   href: "#about" },
+  { label: "Gigs",    href: "#gigs" },
+  { label: "Gallery", href: "#gallery" },
+  { label: "Booking", href: "#booking" },
+];
+---
+
+<nav
+  id="navbar"
+  class="fixed top-0 w-full flex justify-between items-center px-8 py-6 bg-surface/80 backdrop-blur-xl z-50 transition-all duration-300"
+>
+  <!-- Wordmark -->
+  <a href="#home" class="text-2xl font-black tracking-tighter text-white sonic-monolith">
+    MOUAD8EIGHT
+  </a>
+
+  <!-- Desktop links -->
+  <div class="hidden md:flex gap-10">
+    {navLinks.map(({ label, href }) => (
+      <a
+        href={href}
+        data-nav-link
+        class="nav-link font-headline uppercase tracking-widest text-sm text-white/70 hover:text-white transition-all duration-300"
+      >
+        {label}
+      </a>
+    ))}
+  </div>
+
+  <!-- CTA -->
+  <a
+    href="#booking"
+    class="px-6 py-2 font-headline uppercase text-xs tracking-widest bg-white text-black hover:bg-secondary hover:text-on-secondary transition-colors duration-300"
+  >
+    Book Now
+  </a>
+</nav>
+
+<script>
+  const links = document.querySelectorAll<HTMLAnchorElement>("[data-nav-link]");
+
+  const activeClass    = ["text-secondary", "border-b-2", "border-secondary", "pb-1"];
+  const inactiveClass  = ["text-white/70"];
+
+  function setActive(id: string) {
+    links.forEach((link) => {
+      const isActive = link.getAttribute("href") === `#${id}`;
+      activeClass.forEach((c)   => link.classList.toggle(c, isActive));
+      inactiveClass.forEach((c) => link.classList.toggle(c, !isActive));
+    });
+  }
+
+  // Intersection Observer — highlights the link whose section is most visible
+  const sections = document.querySelectorAll<HTMLElement>("section[id]");
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) setActive(entry.target.id);
+      });
+    },
+    { rootMargin: "-40% 0px -55% 0px" }
+  );
+
+  sections.forEach((s) => observer.observe(s));
+
+  // Default: activate "home" on load
+  setActive("home");
+</script>

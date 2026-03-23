@@ -1,33 +1,46 @@
-# Mouad8eight — DJ Portfolio
+# Astro Starter Kit: Basics
 
-Professional portfolio website for DJ Mouad8eight.
-
-## Tech Stack
-- Astro + Tailwind CSS
-- Formspree (booking form)
-- YouTube embeds (sets)
-- Netlify (hosting)
-
-## Getting Started
-
-```bash
-npm install
-npm run dev
+```sh
+npm create astro@latest -- --template basics
 ```
 
-## Updating Content
+> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
 
-All content is managed through simple data files in `src/data/`:
+## 🚀 Project Structure
 
-- **Add a new set:** edit `src/data/sets.js` — paste the YouTube video ID
-- **Add a gig:** edit `src/data/gigs.js` — add date, venue, city
-- **Update bio:** edit `src/data/bio.js`
-- **Add gallery photo:** drop image in `public/images/` and add filename to `src/data/gallery.js`
+Inside of your Astro project, you'll see the following folders and files:
 
-## Deployment
+```text
+/
+├── public/
+│   └── favicon.svg
+├── src
+│   ├── assets
+│   │   └── astro.svg
+│   ├── components
+│   │   └── Welcome.astro
+│   ├── layouts
+│   │   └── Layout.astro
+│   └── pages
+│       └── index.astro
+└── package.json
+```
 
-Connected to Netlify. Push to `main` branch → auto deploys.
+To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
 
-## Contact
+## 🧞 Commands
 
-Built by Mo — [your contact here]
+All commands are run from the root of the project, from a terminal:
+
+| Command                   | Action                                           |
+| :------------------------ | :----------------------------------------------- |
+| `npm install`             | Installs dependencies                            |
+| `npm run dev`             | Starts local dev server at `localhost:4321`      |
+| `npm run build`           | Build your production site to `./dist/`          |
+| `npm run preview`         | Preview your build locally, before deploying     |
+| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
+| `npm run astro -- --help` | Get help using the Astro CLI                     |
+
+## 👀 Want to learn more?
+
+Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).

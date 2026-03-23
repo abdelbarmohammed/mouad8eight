@@ -1,0 +1,72 @@
+---
+interface Props {
+  set: {
+    title: string;
+    venue: string;
+    city: string;
+    date: string;
+    genre: string;
+    videoId: string;
+  };
+  featured?: boolean;
+  latest?: boolean;
+}
+
+const { set, featured = false, latest = false } = Astro.props;
+
+const date = new Date(set.date);
+const formattedDate = date.toLocaleDateString("en-US", { month: "short", year: "numeric" });
+
+const thumbnailUrl = `https://img.youtube.com/vi/${set.videoId}/maxresdefault.jpg`;
+const embedUrl     = `https://www.youtube.com/embed/${set.videoId}?autoplay=1&rel=0&modestbranding=1`;
+---
+
+<div class="group" data-set-card>
+  <!-- Thumbnail / iframe container -->
+  <div class="relative aspect-video overflow-hidden bg-surface-container mb-6">
+
+    <!-- Thumbnail -->
+    <div class="absolute inset-0" data-thumbnail>
+      <img
+        src={thumbnailUrl}
+        alt={set.title}
+        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+      />
+      <!-- Play overlay -->
+      <button
+        data-play-btn
+        data-embed={embedUrl}
+        aria-label={`Play ${set.title}`}
+        class="absolute inset-0 w-full bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity"
+      >
+        <span class={`material-symbols-outlined text-white ${featured ? "text-6xl" : "text-4xl"}`}>
+          play_circle
+        </span>
+      </button>
+    </div>
+
+    <!-- iframe injected on play -->
+    <div class="absolute inset-0 hidden" data-iframe-slot></div>
+  </div>
+
+  <!-- Meta -->
+  <div class="flex justify-between items-start">
+    <div>
+      <h3
+        class={`font-bold font-headline uppercase text-white mb-1 ${featured ? "text-2xl" : "text-xl"}`}
+      >
+        {set.title}
+      </h3>
+      <p
+        class={`text-on-surface-variant font-body uppercase tracking-widest ${featured ? "text-sm" : "text-xs"}`}
+      >
+        {set.genre}&nbsp;•&nbsp;{set.venue}&nbsp;•&nbsp;{formattedDate}
+      </p>
+    </div>
+    {latest && (
+      <span class="text-secondary font-headline text-sm uppercase tracking-widest shrink-0 ml-4">
+        Latest
+      </span>
+    )}
+  </div>
+</div>

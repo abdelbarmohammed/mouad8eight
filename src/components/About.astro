@@ -1,0 +1,41 @@
+---
+import { bio } from "../data/bio.js";
+---
+
+<section id="about" class="py-32 px-8 md:px-24 bg-surface-container-lowest">
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-24 items-center">
+
+    <!-- Portrait -->
+    <!-- Replace /images/about-portrait.jpg with your photo in public/images/ -->
+    <div class="relative">
+      <div class="absolute -top-4 -left-4 w-24 h-24 border-t-2 border-l-2 border-secondary/50"></div>
+      <img
+        src="/images/about-portrait.jpg"
+        alt="MOUAD8EIGHT"
+        class="w-full aspect-[3/4] object-cover grayscale brightness-75"
+      />
+      <div class="absolute -bottom-4 -right-4 w-24 h-24 border-b-2 border-r-2 border-secondary/50"></div>
+    </div>
+
+    <!-- Text -->
+    <div class="flex flex-col">
+      <h2 class="text-5xl md:text-8xl font-bold sonic-monolith text-white mb-12">
+        The<br />Architect
+      </h2>
+
+      <p class="text-on-surface-variant font-body leading-loose text-lg font-light">
+        {bio.text.trim()}
+      </p>
+
+      <!-- Genre tags -->
+      <div class="mt-16 flex flex-wrap gap-4">
+        {bio.genres.map((genre) => (
+          <span class="px-6 py-2 border border-outline-variant text-xs uppercase tracking-widest text-secondary font-headline">
+            {genre}
+          </span>
+        ))}
+      </div>
+    </div>
+
+  </div>
+</section>

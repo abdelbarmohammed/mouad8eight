@@ -1,0 +1,46 @@
+---
+import { bio } from "../data/bio.js";
+
+const year = new Date().getFullYear();
+
+const links = [
+  { label: "Instagram",       href: bio.socials.instagram },
+  { label: "SoundCloud",      href: bio.socials.soundcloud },
+  { label: "YouTube",         href: bio.socials.youtube },
+];
+---
+
+<footer class="bg-surface-container-lowest flex flex-col md:flex-row justify-between items-center px-12 w-full py-12 mt-20 gap-8">
+
+  <!-- Wordmark + copyright -->
+  <div class="text-center md:text-left">
+    <div class="text-lg font-bold text-white sonic-monolith">MOUAD8EIGHT</div>
+    <p class="font-body text-[10px] tracking-[0.1em] uppercase text-on-surface-variant mt-2 opacity-50">
+      &copy; {year} MOUAD8EIGHT. All rights reserved.
+    </p>
+  </div>
+
+  <!-- Social links -->
+  <nav class="flex gap-12" aria-label="Social links">
+    {links.map(({ label, href }) => (
+      <a
+        href={href}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="font-body text-xs tracking-[0.1em] uppercase text-on-surface-variant hover:text-secondary hover:translate-y-[-2px] transition-all duration-300"
+      >
+        {label}
+      </a>
+    ))}
+  </nav>
+
+  <!-- Back to top -->
+  <a
+    href="#home"
+    aria-label="Back to top"
+    class="w-12 h-12 flex items-center justify-center border border-outline-variant/30 text-white/50 hover:text-white hover:border-white transition-all"
+  >
+    <span class="material-symbols-outlined">arrow_upward</span>
+  </a>
+
+</footer>

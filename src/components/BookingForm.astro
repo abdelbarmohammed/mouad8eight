@@ -1,0 +1,223 @@
+---
+import { bio } from "../data/bio.js";
+
+// Paste your Formspree form ID here after creating a form at formspree.io
+const FORMSPREE_ID = "YOUR_FORMSPREE_ID";
+---
+
+<section id="booking" class="py-32 px-8 md:px-24 bg-background">
+  <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-24">
+
+    <!-- Left: heading + contact info -->
+    <div>
+      <h2 class="text-5xl md:text-8xl font-bold sonic-monolith text-white mb-8">
+        Secure<br />Date
+      </h2>
+      <p class="text-on-surface-variant font-body text-lg mb-12">
+        For all performance inquiries, festival bookings, and press requests.
+        Please allow 48 hours for our management team to respond.
+      </p>
+
+      <div class="space-y-6">
+        <!-- Email -->
+        <div class="flex items-center gap-6">
+          <span class="w-12 h-12 bg-surface-container flex items-center justify-center text-secondary shrink-0">
+            <span class="material-symbols-outlined">mail</span>
+          </span>
+          <div>
+            <p class="text-xs uppercase tracking-widest text-on-surface-variant font-headline mb-1">
+              Management
+            </p>
+            <a
+              href={`mailto:${bio.socials.email}`}
+              class="text-white hover:text-secondary transition-colors"
+            >
+              {bio.socials.email}
+            </a>
+          </div>
+        </div>
+
+        <!-- Socials quick links -->
+        <div class="flex items-center gap-6">
+          <span class="w-12 h-12 bg-surface-container flex items-center justify-center text-secondary shrink-0">
+            <span class="material-symbols-outlined">headphones</span>
+          </span>
+          <div>
+            <p class="text-xs uppercase tracking-widest text-on-surface-variant font-headline mb-1">
+              Listen
+            </p>
+            <a
+              href={bio.socials.soundcloud}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-white hover:text-secondary transition-colors"
+            >
+              SoundCloud
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right: form -->
+    <div>
+      <!-- Success message (hidden until submission) -->
+      <div data-success class="hidden py-16 text-center">
+        <span class="material-symbols-outlined text-5xl text-secondary mb-6 block">check_circle</span>
+        <p class="text-white font-headline uppercase tracking-[0.2em] text-lg mb-2">Inquiry Sent</p>
+        <p class="text-on-surface-variant font-body text-sm">We'll be in touch within 48 hours.</p>
+      </div>
+
+      <!-- Error message (hidden until error) -->
+      <p data-error class="hidden text-xs font-headline uppercase tracking-widest text-red-400 mb-6">
+        Something went wrong — please try again or email directly.
+      </p>
+
+      <form
+        data-booking-form
+        action={`https://formspree.io/f/${FORMSPREE_ID}`}
+        method="POST"
+        class="space-y-8"
+      >
+        <!-- Row 1: name + email -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div class="space-y-2">
+            <label class="block text-[10px] uppercase tracking-[0.2em] text-on-surface-variant">
+              Full Name
+            </label>
+            <input
+              type="text"
+              name="name"
+              required
+              class="w-full bg-surface-container p-4 text-white focus:ring-1 focus:ring-secondary transition-all outline-none border-none"
+            />
+          </div>
+          <div class="space-y-2">
+            <label class="block text-[10px] uppercase tracking-[0.2em] text-on-surface-variant">
+              Email Address
+            </label>
+            <input
+              type="email"
+              name="email"
+              required
+              class="w-full bg-surface-container p-4 text-white focus:ring-1 focus:ring-secondary transition-all outline-none border-none"
+            />
+          </div>
+        </div>
+
+        <!-- Row 2: event type + date -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div class="space-y-2">
+            <label class="block text-[10px] uppercase tracking-[0.2em] text-on-surface-variant">
+              Event Type
+            </label>
+            <select
+              name="event_type"
+              class="w-full bg-surface-container p-4 text-white focus:ring-1 focus:ring-secondary transition-all outline-none border-none"
+            >
+              <option value="Club Show">Club Show</option>
+              <option value="Festival">Festival</option>
+              <option value="Private Event">Private Event</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+          <div class="space-y-2">
+            <label class="block text-[10px] uppercase tracking-[0.2em] text-on-surface-variant">
+              Date
+            </label>
+            <input
+              type="date"
+              name="date"
+              class="w-full bg-surface-container p-4 text-white focus:ring-1 focus:ring-secondary transition-all outline-none border-none"
+            />
+          </div>
+        </div>
+
+        <!-- Row 3: location + budget -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div class="space-y-2">
+            <label class="block text-[10px] uppercase tracking-[0.2em] text-on-surface-variant">
+              Location
+            </label>
+            <input
+              type="text"
+              name="location"
+              placeholder="City, Country"
+              class="w-full bg-surface-container p-4 text-white placeholder:text-white/20 focus:ring-1 focus:ring-secondary transition-all outline-none border-none"
+            />
+          </div>
+          <div class="space-y-2">
+            <label class="block text-[10px] uppercase tracking-[0.2em] text-on-surface-variant">
+              Budget
+            </label>
+            <input
+              type="text"
+              name="budget"
+              placeholder="Approx. budget"
+              class="w-full bg-surface-container p-4 text-white placeholder:text-white/20 focus:ring-1 focus:ring-secondary transition-all outline-none border-none"
+            />
+          </div>
+        </div>
+
+        <!-- Row 4: message -->
+        <div class="space-y-2">
+          <label class="block text-[10px] uppercase tracking-[0.2em] text-on-surface-variant">
+            Message
+          </label>
+          <textarea
+            name="message"
+            rows="4"
+            class="w-full bg-surface-container p-4 text-white focus:ring-1 focus:ring-secondary transition-all outline-none border-none resize-none"
+          ></textarea>
+        </div>
+
+        <!-- Submit -->
+        <button
+          data-submit-btn
+          type="submit"
+          class="w-full bg-secondary text-on-secondary font-headline uppercase tracking-[0.3em] py-5 text-sm hover:brightness-110 active:scale-[0.98] transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+        >
+          Submit Inquiry
+        </button>
+      </form>
+    </div>
+
+  </div>
+</section>
+
+<script>
+  const form    = document.querySelector<HTMLFormElement>("[data-booking-form]");
+  const btn     = document.querySelector<HTMLButtonElement>("[data-submit-btn]");
+  const success = document.querySelector<HTMLElement>("[data-success]");
+  const error   = document.querySelector<HTMLElement>("[data-error]");
+
+  form?.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    if (!btn || !success || !error) return;
+
+    btn.disabled = true;
+    btn.textContent = "Sending…";
+    error.classList.add("hidden");
+
+    try {
+      const res = await fetch(form.action, {
+        method: "POST",
+        body: new FormData(form),
+        headers: { Accept: "application/json" },
+      });
+
+      if (res.ok) {
+        form.classList.add("hidden");
+        success.classList.remove("hidden");
+      } else {
+        error.classList.remove("hidden");
+        btn.disabled = false;
+        btn.textContent = "Submit Inquiry";
+      }
+    } catch {
+      error.classList.remove("hidden");
+      btn.disabled = false;
+      btn.textContent = "Submit Inquiry";
+    }
+  });
+</script>

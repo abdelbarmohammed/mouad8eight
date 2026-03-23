@@ -12,6 +12,9 @@ Built with **Astro + Tailwind CSS**, deployed on **Netlify** (static, zero serve
 Contact/booking form handled by **Formspree** (no backend needed).
 YouTube embeds for sets (no self-hosted audio/video).
 
+## Design Reference
+Stitch-generated HTML design is at `docs/stitch/code.html`.
+Use it as the visual blueprint when building components.
 ---
 
 ## Stack
