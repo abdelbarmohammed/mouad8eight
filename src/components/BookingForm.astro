@@ -9,7 +9,7 @@ const FORMSPREE_ID = "YOUR_FORMSPREE_ID";
   <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-24">
 
     <!-- Left: heading + contact info -->
-    <div>
+    <div data-reveal>
       <h2 class="text-5xl md:text-8xl font-bold sonic-monolith text-white mb-8">
         Secure<br />Date
       </h2>
@@ -60,7 +60,7 @@ const FORMSPREE_ID = "YOUR_FORMSPREE_ID";
     </div>
 
     <!-- Right: form -->
-    <div>
+    <div data-reveal data-reveal-delay="2">
       <!-- Success message (hidden until submission) -->
       <div data-success class="hidden py-16 text-center">
         <span class="material-symbols-outlined text-5xl text-secondary mb-6 block">check_circle</span>
@@ -175,7 +175,7 @@ const FORMSPREE_ID = "YOUR_FORMSPREE_ID";
         <button
           data-submit-btn
           type="submit"
-          class="w-full bg-secondary text-on-secondary font-headline uppercase tracking-[0.3em] py-5 text-sm hover:brightness-110 active:scale-[0.98] transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+          class="w-full bg-secondary text-on-secondary font-headline uppercase tracking-[0.3em] py-5 text-sm hover:brightness-110 active:scale-[0.98] transition-all cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
         >
           Submit Inquiry
         </button>

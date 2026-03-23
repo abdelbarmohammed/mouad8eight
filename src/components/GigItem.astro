@@ -18,7 +18,7 @@ const month = String(d.getMonth() + 1).padStart(2, "0");
 const formattedDate = `${day}.${month}`;
 ---
 
-<div class="group flex flex-col md:flex-row justify-between items-start md:items-center py-12 border-b border-outline-variant/20 hover:bg-surface-container-low transition-colors px-4">
+<div data-reveal class="group flex flex-col md:flex-row justify-between items-start md:items-center py-12 border-b border-outline-variant/20 hover:bg-surface-container-low transition-colors px-4">
 
   <!-- Left: date + venue info -->
   <div class="flex items-center gap-12 mb-4 md:mb-0">

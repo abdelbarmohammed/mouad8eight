@@ -37,5 +37,18 @@ const {
   </head>
   <body class="font-body selection:bg-secondary selection:text-on-secondary">
     <slot />
+    <script>
+      const io = new IntersectionObserver(
+        (entries) =>
+          entries.forEach((e) => {
+            if (e.isIntersecting) {
+              e.target.classList.add("visible");
+              io.unobserve(e.target);
+            }
+          }),
+        { rootMargin: "0px 0px -8% 0px", threshold: 0.1 }
+      );
+      document.querySelectorAll("[data-reveal]").forEach((el) => io.observe(el));
+    </script>
   </body>
 </html>

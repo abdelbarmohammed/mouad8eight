@@ -7,21 +7,21 @@ import { bio } from "../data/bio.js";
   class="relative min-h-screen flex flex-col justify-center items-start px-8 md:px-24 overflow-hidden"
 >
   <!-- Background image + gradient overlay -->
-  <!-- Replace /images/hero-bg.jpg with your own photo in public/images/ -->
+  <!-- Replace this URL with your own photo: drop it in public/images/ and use /images/filename.jpg -->
   <div class="absolute inset-0 z-0 overflow-hidden">
     <div
       class="absolute inset-0 bg-gradient-to-r from-[#0a0a0a] via-[#0a0a0a]/80 to-transparent z-10"
     ></div>
     <img
-      src="/images/hero-bg.jpg"
+      src="https://images.unsplash.com/photo-1571266028243-e4733b0f0bb0?auto=format&fit=crop&w=1920&q=80"
       alt="MOUAD8EIGHT performing live"
       class="w-full h-full object-cover grayscale opacity-40"
       loading="eager"
     />
   </div>
 
-  <!-- Main content -->
-  <div class="relative z-20 max-w-4xl">
+  <!-- Main content — animate-hero staggers children on load -->
+  <div class="animate-hero relative z-20 max-w-4xl">
     <!-- Eyebrow -->
     <span class="block text-secondary font-headline tracking-[0.3em] uppercase text-sm mb-4">
       {bio.tagline}
