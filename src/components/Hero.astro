@@ -27,9 +27,9 @@ import { bio } from "../data/bio.js";
       {bio.tagline}
     </span>
 
-    <!-- Name -->
+    <!-- Name — each word is scrambled independently via JS -->
     <h1 class="text-7xl md:text-[12rem] font-bold sonic-monolith leading-[0.85] mb-8 text-white">
-      MOUAD<br />8EIGHT
+      <span data-scramble="MOUAD">MOUAD</span><br /><span data-scramble="8EIGHT">8EIGHT</span>
     </h1>
 
     <!-- Subline -->
@@ -67,3 +67,44 @@ import { bio } from "../data/bio.js";
     </div>
   </div>
 </section>
+
+<script>
+  // Characters used during scramble — uppercase + numbers matches the title aesthetic
+  const CHARS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789#@$%!?-+";
+  const DURATION = 1500; // ms
+
+  const rand = (n: number) => Math.floor(Math.random() * n);
+
+  document.querySelectorAll<HTMLElement>("[data-scramble]").forEach((el) => {
+    const target = el.dataset.scramble ?? "";
+    const n = target.length;
+    let startTime: number | null = null;
+
+    // lockAt(i): the progress value [0–1] at which character i reveals itself.
+    // Spread from 0.10 → 0.85 so all chars scramble for ~150ms before locking.
+    const lockAt = (i: number) => 0.1 + (i / Math.max(n - 1, 1)) * 0.75;
+
+    const tick = (timestamp: number) => {
+      if (!startTime) startTime = timestamp;
+      const progress = Math.min((timestamp - startTime) / DURATION, 1);
+
+      let output = "";
+      for (let i = 0; i < n; i++) {
+        output +=
+          progress >= lockAt(i)
+            ? target[i]
+            : CHARS[rand(CHARS.length)];
+      }
+
+      el.textContent = output;
+
+      if (progress < 1) {
+        requestAnimationFrame(tick);
+      } else {
+        el.textContent = target; // guarantee exact final text
+      }
+    };
+
+    requestAnimationFrame(tick);
+  });
+</script>

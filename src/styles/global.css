@@ -85,6 +85,33 @@ body {
   scroll-behavior: smooth;
 }
 
+/* ── Film grain overlay ── */
+@keyframes grain {
+  0%   { background-position:   0%   0%; }
+  10%  { background-position:  -5% -10%; }
+  20%  { background-position: -15%   5%; }
+  30%  { background-position:   7% -25%; }
+  40%  { background-position:  20%  25%; }
+  50%  { background-position: -25%  10%; }
+  60%  { background-position:  15%   5%; }
+  70%  { background-position:   0%  15%; }
+  80%  { background-position:  25%  35%; }
+  90%  { background-position: -10%  10%; }
+  100% { background-position:   0%   0%; }
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.03;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size: 200px 200px;
+  animation: grain 0.5s steps(1) infinite;
+}
+
 /* ── Custom utilities ── */
 .sonic-monolith {
   text-transform: uppercase;
@@ -103,6 +130,35 @@ body {
 /* ── Material Symbols defaults ── */
 .material-symbols-outlined {
   font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+}
+
+/* ── Glitch: fires after the scramble finishes, every ~8s ── */
+@keyframes glitch {
+  /* 87% of the cycle is completely clean */
+  0%, 87%, 100% {
+    transform: none;
+    text-shadow: none;
+    clip-path: none;
+  }
+
+  /* ─ A: shake + RGB channel split ─ */
+  88%   { transform: translateX(-4px) skewX(-0.3deg); text-shadow:  4px 0 #ff0040, -4px 0 #0057ff; clip-path: none; }
+  88.5% { transform: translateX( 4px) skewX( 0.3deg); text-shadow: -4px 0 #ff0040,  4px 0 #0057ff; clip-path: none; }
+  89%   { transform: translateX(-1px);                  text-shadow:  2px 0 #ff0040;                  clip-path: none; }
+  89.5% { transform: none; text-shadow: none; clip-path: none; }
+
+  /* ─ B: horizontal slice displacement ─ */
+  92%   { transform: translateX( 6px); text-shadow: -3px 0 #ff0040; clip-path: inset(8%  0 76% 0); }
+  92.5% { transform: translateX(-6px); text-shadow:  3px 0 #0057ff; clip-path: inset(62% 0 16% 0); }
+  93%   { transform: translateX( 2px); text-shadow: none;            clip-path: inset(38% 0 44% 0); }
+  93.5% { transform: none; text-shadow: none; clip-path: none; }
+}
+
+/* ── h1 excluded from animate-hero fade — scramble is its entrance,
+       glitch kicks in after scramble completes (1.5s delay) ── */
+.animate-hero > h1 {
+  opacity: 1;
+  animation: glitch 8s 1.5s infinite;
 }
 
 /* ── Hero entrance animation (fires on load, no JS needed) ── */
