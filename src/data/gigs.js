@@ -17,9 +17,9 @@ export const gigs = [
   {
     id: 2,
     date: "2026-05-03",
-    venue: "Another Venue",
-    city: "Madrid",
-    country: "Spain",
+    venue: "Fabryka Sztuki",
+    city: "Łódź",
+    country: "Poland",
     ticketUrl: null,
   },
 ];
