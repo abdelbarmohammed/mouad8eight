@@ -23,9 +23,11 @@ import { bio } from "../data/bio.js";
         The<br />Architect
       </h2>
 
-      <p class="text-on-surface-variant font-body leading-loose text-lg font-light">
-        {bio.text.trim()}
-      </p>
+      {bio.text.trim().split("\n\n").map((para) => (
+        <p class="text-on-surface-variant font-body leading-loose text-lg font-light mb-6">
+          {para.trim()}
+        </p>
+      ))}
 
       <!-- Genre tags -->
       <div class="mt-16 flex flex-wrap gap-4">

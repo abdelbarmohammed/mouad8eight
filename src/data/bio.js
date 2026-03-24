@@ -4,12 +4,9 @@
  */
 
 export const bio = {
-  tagline: "Techno. House. No limits.",
-  text: `Mouad8eight is a DJ and selector based in Łódź, Poland.
-  Known for high-energy sets that move between dark techno and melodic house,
-  he has become a fixture in the underground club scene of central Poland and beyond.
-  His sound is forged in late nights, raw industrial energy, and an uncompromising dedication to the dance floor.`,
-  genres: ["Techno", "House", "Melodic", "Dark"],
+  tagline: "Every continent has a sound. I play them all.",
+  text: `I grew up in Casablanca, where Gnawa rhythms bleed into house music and the call to prayer shares a wall with a bass speaker. That collision never left me.\n\nFive years across Europe have sharpened that into something precise and unpredictable. My sets move between worlds — North African percussion, deep house, raw techno, whatever the room needs. Genre is a suggestion.`,
+  genres: ["North African", "Deep House", "Raw Techno", "No Limits"],
   socials: {
     instagram: "https://instagram.com/mouad8eight",
     soundcloud: "https://soundcloud.com/mouad8eight",
